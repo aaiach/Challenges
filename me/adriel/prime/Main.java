@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class Main {
 	
 	/**
-	 * Execution time for all primes up to 100000 is 32075ms
+	 * Execution time for all primes up to 100000 is 29423ms
 	 * This method finds prime numbers using the Eratosthene's Sieve technique.
 
-	 * Adriel Aiach
+	 * Adriel
 	**/
 	
 	
@@ -31,7 +31,7 @@ public class Main {
 		}
 
 		//Looping through all possible factors within our selected range and removing them from the ArrayList
-		for (int i = 2; i < (int)(max/3) ; i++) {
+		for (int i = 2; i < (int)(Math.pow(max, 0.5)) ; i++) {
 			for(int j = 2; (i*j) <= max; j++) {
 				if(primes.contains(i*j)){
 					primes.remove(primes.indexOf(i*j));
