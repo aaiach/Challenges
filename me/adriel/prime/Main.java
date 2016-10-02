@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Main {
 	
 	/**
-	 * Execution time for all primes up to 100000 is 29423ms
+	 * Execution time for all primes up to 100000 has been 20545ms
 	 * This method finds prime numbers using the Eratosthene's Sieve technique.
 
 	 * Adriel
@@ -21,6 +21,7 @@ public class Main {
 		long time_a = System.currentTimeMillis();
 
 		System.out.println("Time taken to execute: " + (time_a - time_b));
+		System.out.println("There are a total of " + primes.size() + " primes");
 	}
 
 	public static void getPrimes(int max) {
@@ -32,7 +33,7 @@ public class Main {
 
 		//Looping through all possible factors within our selected range and removing them from the ArrayList
 		for (int i = 2; i < (int)(Math.pow(max, 0.5)) ; i++) {
-			for(int j = 2; (i*j) <= max; j++) {
+			for(int j = i; (i*j) <= max; j++) {
 				if(primes.contains(i*j)){
 					primes.remove(primes.indexOf(i*j));
 				}
