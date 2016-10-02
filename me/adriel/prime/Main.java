@@ -31,7 +31,7 @@ public class Main {
 		}
 
 		//Looping through all possible factors within our selected range and removing them from the ArrayList
-		for (int i = 2; i < (max/3) ; i++) {
+		for (int i = 2; i < (int)(max/3) ; i++) {
 			for(int j = 2; (i*j) <= max; j++) {
 				if(primes.contains(i*j)){
 					primes.remove(primes.indexOf(i*j));
